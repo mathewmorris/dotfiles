@@ -1,0 +1,2 @@
+require("smoose")
+print("hello")

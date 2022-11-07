@@ -107,12 +107,15 @@ alias nr="npm run"
 alias getJwt="/Users/morrisms/code/snippets/bin/getJwt.sh"
 alias killport=findandkill
 alias dotnet-core-uninstall="~/dotnet-core-uninstall/dotnet-core-uninstall"
+alias vim="$HOME/nvim-macos/bin/nvim"
+alias gw="git worktree"
 
 eval "$(nodenv init -)"
 
 # Github
 export GIT_USERNAME="mathewmorris"
 export GIT_PERSONAL_ACCESS_TOKEN="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"
+export XDG_CONFIG_HOME="$HOME/dotfiles"
 
 # .NET
 alias nuget="mono /usr/local/bin/nuget.exe"
