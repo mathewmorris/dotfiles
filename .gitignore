@@ -1,0 +1,9 @@
+# ignore all
+*
+
+# allow list
+!.gitignore
+!.zshrc
+!README.md
+!nvim
+!.p10k.zsh
