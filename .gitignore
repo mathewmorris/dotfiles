@@ -1,9 +1,3 @@
-# ignore all
-*
+nvim/plugin
+nextjs-nodejs
 
-# allow list
-!.gitignore
-!.zshrc
-!README.md
-!nvim
-!.p10k.zsh
