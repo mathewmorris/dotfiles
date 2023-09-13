@@ -24,5 +24,7 @@ All configuration I'm used to, stored in one place.
     ```
 
 ## neovim
+- [install prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
+- [install and build nvim](https://github.com/neovim/neovim/wiki/Building-Neovim)
 - run `:PackerInstall` in nvim
 
