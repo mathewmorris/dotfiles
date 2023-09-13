@@ -4,7 +4,10 @@ if (not status) then
   return
 end
 
-require'nvim-treesitter.configs'.setup {
+ts.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "typescript" },
+  ensure_installed = { "lua", "dart", "javascript", "typescript", "tsx" },
+  highlight = {
+    enabled = true
+    }
   }

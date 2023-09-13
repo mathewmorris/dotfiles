@@ -1,2 +1,4 @@
-require("plugins")
-require("smoose")
+require("core.keymaps")
+require("core.plugins")
+require("core.plugin_config")
+
