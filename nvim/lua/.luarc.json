@@ -1,0 +1,26 @@
+{
+    "workspace.library": [
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/neodev.nvim/types/nightly",
+        "/usr/local/share/nvim/runtime/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/LuaSnip/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/harpoon/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/lualine.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/mason.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/neodev.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/nvim-cmp/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/nvim-comment/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/nvim-lspconfig/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/nvim-tree.lua/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/nvim-treesitter/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/nvim-web-devicons/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/packer.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/plenary.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/telescope.nvim/lua",
+        "/home/smoose/.local/share/nvim/site/pack/packer/start/tokyonight.nvim/lua",
+        "/home/smoose/dotfiles/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}
