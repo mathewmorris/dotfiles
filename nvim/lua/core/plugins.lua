@@ -12,15 +12,15 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim' 
-  use 'ellisonleao/gruvbox.nvim'
+  use 'wbthomason/packer.nvim'
+  use 'folke/tokyonight.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
-	use 'terrortylor/nvim-comment' 
-	use 'neovim/nvim-lspconfig'
-	use 'jose-elias-alvarez/typescript.nvim'
-	use 'ThePrimeagen/harpoon'
+  use 'terrortylor/nvim-comment'
+
+  use 'neovim/nvim-lspconfig'
+  use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
   use {
@@ -29,28 +29,28 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
-      'nvim-treesitter/nvim-treesitter',
-      run = function()
-        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-    }
-
-	require('nvim_comment').setup()
-use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v2.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},     -- Required
-    {'hrsh7th/cmp-nvim-lsp'}, -- Required
-    {'L3MON4D3/LuaSnip'},     -- Required
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
   }
-}
+
+  require('nvim_comment').setup()
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},             -- Required
+      {'williamboman/mason.nvim'},           -- Optional
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
+    }
+  }
 end)
 
