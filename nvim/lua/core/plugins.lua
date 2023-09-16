@@ -50,5 +50,7 @@ return require('packer').startup(function(use)
         end,
     }
 
+  use 'mbbill/undotree'
+
 end)
 
