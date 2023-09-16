@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'terrortylor/nvim-comment'
-
+  use 'folke/neodev.nvim'
   use 'neovim/nvim-lspconfig'
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
   }
 
   require('nvim_comment').setup()
+  require('neodev').setup()
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -52,5 +53,9 @@ return require('packer').startup(function(use)
       {'L3MON4D3/LuaSnip'},     -- Required
     }
   }
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
 
