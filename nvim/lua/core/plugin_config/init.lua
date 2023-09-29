@@ -1,3 +1,4 @@
+require("core.plugin_config.dap")
 require("core.plugin_config.harpoon")
 require("core.plugin_config.lsp")
 require("core.plugin_config.lualine")
