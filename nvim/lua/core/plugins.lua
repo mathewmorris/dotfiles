@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.3',
@@ -36,23 +37,35 @@ return require('packer').startup(function(use)
     end,
   }
 
-  require('nvim_comment').setup()
-  require('neodev').setup()
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
     requires = {
       -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'L3MON4D3/LuaSnip'},
     }
   }
+
+  use 'jbyuki/one-small-step-for-vimkind'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+  require('nvim-dap-virtual-text').setup()
+  require('dapui').setup()
+  require('nvim_comment').setup()
+  require('neodev').setup({
+    library = {
+      plugins = { "nvim-dap-ui" },
+      types = true,
+    }
+  })
 
   if packer_bootstrap then
     require('packer').sync()
