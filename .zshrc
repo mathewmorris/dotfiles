@@ -8,7 +8,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 path=("$HOME/bin:/usr/local/bin" $path)
 
-path+=("$HOME/.nodenv/bin")
+path+=("$HOME/.nodenv/bin" $path)
 
 export PATH
 
@@ -28,6 +28,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git) 
 
+eval "$(nodenv init -)"
 source $ZSH/oh-my-zsh.sh
 
 alias sz="source ~/.zshrc"
@@ -39,8 +40,8 @@ alias killport=findandkill
 alias dotnet-core-uninstall="~/dotnet-core-uninstall/dotnet-core-uninstall"
 alias vim="nvim"
 alias gw="git worktree"
-
-eval "$(nodenv init -)"
+alias tls="tmux ls"
+alias t="tmux"
 
 # Github
 export GIT_USERNAME="mathewmorris"
