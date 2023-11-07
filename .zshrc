@@ -31,27 +31,15 @@ plugins=(git)
 eval "$(nodenv init -)"
 source $ZSH/oh-my-zsh.sh
 
+alias vim="nvim"
+
 alias sz="source ~/.zshrc"
 alias cz="vim ~/.zshrc"
+
 alias ni="npm install"
 alias nr="npm run"
-alias getJwt="/Users/morrisms/code/snippets/bin/getJwt.sh"
-alias killport=findandkill
-alias dotnet-core-uninstall="~/dotnet-core-uninstall/dotnet-core-uninstall"
-alias vim="nvim"
-alias gw="git worktree"
-alias tls="tmux ls"
-alias t="tmux"
 
-# Github
-export GIT_USERNAME="mathewmorris"
-export GIT_PERSONAL_ACCESS_TOKEN=""
 export XDG_CONFIG_HOME="$HOME/dotfiles"
-
-# .NET
-# alias nuget="mono /usr/local/bin/nuget.exe"
-
-# Custom Functions
 
 findandkill() {
   port=$(lsof -n -i4TCP:$1 | grep LISTEN | awk '{ print $2 }')
