@@ -2,6 +2,8 @@
 All configuration I'm used to, stored in one place.
 
 ## zsh
+// TODO: write a script that will do all this for me
+
 - install [zsh](https://www.zsh.org/)
     ```bash
         sudo apt-get update && sudo apt-get install zsh
@@ -10,9 +12,9 @@ All configuration I'm used to, stored in one place.
     ```bash
         sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
-- move .zshrc file to ~
+- link .zshrc file to ~
     ```bash
-        cp ./dotfiles/.zshrc ~
+        ln ~/dotfiles/.zshrc ~/.zshrc
     ```
 - install p10k theme
     ```bash
@@ -22,6 +24,13 @@ All configuration I'm used to, stored in one place.
     ```bash
         git clone https://github.com/nodenv/nodenv.git ~/.nodenv
     ```
+- install nodenv install as a plugin to nodenv
+    ```bash
+        mkdir -p "$(nodenv root)"/plugins
+        git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
+    ```
+- install latest node version
+- set node version as global nodenv `nodenv global x.x.x`
 
 ## neovim
 - [install prerequisites](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
