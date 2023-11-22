@@ -9,7 +9,7 @@ fi
 path=("$HOME/bin:/usr/local/bin" $path)
 
 path+=("$HOME/.nodenv/bin" $path)
-path+=("/home/smoose/.local/bin" $path)
+path+=("$HOME/.local/bin" $path)
 
 export PATH
 
