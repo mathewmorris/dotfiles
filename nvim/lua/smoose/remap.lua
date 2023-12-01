@@ -39,11 +39,11 @@ keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 
 -- Debugging
-keymap('n', '<F5>', ":lua require'dap'.continue()<CR>", default_opts)
-keymap('n', '<F1>', ":lua require'dap'.step_over()<CR>", default_opts)
-keymap('n', '<F2>', ":lua require'dap'.step_into()<CR>", default_opts)
-keymap('n', '<F3>', ":lua require'dap'.step_out()<CR>", default_opts)
-keymap('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", default_opts)
-keymap('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint message: '))<CR>", default_opts)
-keymap('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", default_opts)
+-- keymap('n', '<F5>', ":lua require'dap'.continue()<CR>", default_opts)
+-- keymap('n', '<F1>', ":lua require'dap'.step_over()<CR>", default_opts)
+-- keymap('n', '<F2>', ":lua require'dap'.step_into()<CR>", default_opts)
+-- keymap('n', '<F3>', ":lua require'dap'.step_out()<CR>", default_opts)
+-- keymap('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", default_opts)
+-- keymap('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint message: '))<CR>", default_opts)
+-- keymap('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", default_opts)
 

@@ -10,6 +10,8 @@ path=("$HOME/bin:/usr/local/bin" $path)
 
 path+=("$HOME/.nodenv/bin" $path)
 
+path+=("/usr/local/go/bin" $path)
+
 export PATH
 
 # Path to your oh-my-zsh installation.
