@@ -10,6 +10,10 @@ keymap("t", "jk", "<C-\\><C-n>", default_opts)
 keymap("n", "n", "nzz", default_opts)
 keymap("n", "N", "Nzz", default_opts)
 
+-- Center page up/down
+keymap("n", "<C-d>", "<C-d>zz",default_opts)
+keymap("n", "<C-u>", "<C-u>zz",default_opts)
+
 -- Visual line wraps
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
