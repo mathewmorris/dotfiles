@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
+  use 'tpope/vim-surround'
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.3',
