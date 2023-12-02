@@ -20,3 +20,13 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
+require('nvim-dap-virtual-text').setup()
+require('dapui').setup()
+require('nvim_comment').setup()
+require('neodev').setup({
+  library = {
+    plugins = { "nvim-dap-ui" },
+    types = true,
+  }
+})
+

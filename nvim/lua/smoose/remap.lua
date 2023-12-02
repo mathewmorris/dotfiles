@@ -2,17 +2,26 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
--- Better escape using jk in insert and terminal mode
-keymap("i", "jk", "<ESC>", default_opts)
-keymap("t", "jk", "<C-\\><C-n>", default_opts)
+-- Open up netrw
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Center search results
-keymap("n", "n", "nzz", default_opts)
-keymap("n", "N", "Nzz", default_opts)
+keymap("n", "n", "nzzzv", default_opts)
+keymap("n", "N", "Nzzzv", default_opts)
 
 -- Center page up/down
-keymap("n", "<C-d>", "<C-d>zz",default_opts)
-keymap("n", "<C-u>", "<C-u>zz",default_opts)
+keymap("n", "<C-d>", "<C-d>zz", default_opts)
+keymap("n", "<C-u>", "<C-u>zz", default_opts)
+
+-- Yank into system clipboard
+keymap("n", "<leader>y", "\"+y", default_opts)
+keymap("v", "<leader>y", "\"+y", default_opts)
+keymap("n", "<leader>Y", "\"+Y", default_opts)
+
+-- Delete to void
+keymap("n", "<leader>d", "\"_d", default_opts)
+keymap("v", "<leader>d", "\"_d", default_opts)
 
 -- Visual line wraps
 keymap("n", "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
@@ -22,13 +31,6 @@ keymap("n", "j", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 keymap("v", "<", "<gv", default_opts)
 keymap("v", ">", ">gv", default_opts)
 
--- Paste over currently selected text without yanking it
-keymap("v", "p", '"_dP', default_opts)
-
--- Switch buffer
-keymap("n", "<S-h>", ":bprevious<CR>", default_opts)
-keymap("n", "<S-l>", ":bnext<CR>", default_opts)
-
 -- Cancel search highlighting with ESC
 keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_opts)
 
@@ -36,18 +38,27 @@ keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", default_opts)
 keymap("x", "J", ":move '>+1<CR>gv-gv", default_opts)
 
+-- put line below on this line while leaving cursor alone
+keymap("n", "J", "mzJ`z", default_opts)
+
+-- Never go here?
+keymap("n", "Q", "<nop>", default_opts)
+
+-- tmux brilliance
+keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", default_opts)
+
+vim.keymap.set("n", "<leader>f", function()
+  vim.lsp.buf.format()
+end, expr_opts)
+
 -- Resizing panes
 keymap("n", "<Left>", ":vertical resize +1<CR>", default_opts)
 keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 
--- Debugging
--- keymap('n', '<F5>', ":lua require'dap'.continue()<CR>", default_opts)
--- keymap('n', '<F1>', ":lua require'dap'.step_over()<CR>", default_opts)
--- keymap('n', '<F2>', ":lua require'dap'.step_into()<CR>", default_opts)
--- keymap('n', '<F3>', ":lua require'dap'.step_out()<CR>", default_opts)
--- keymap('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<CR>", default_opts)
--- keymap('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint message: '))<CR>", default_opts)
--- keymap('n', '<leader>dr', ":lua require'dap'.repl.open()<CR>", default_opts)
+keymap('n', '<F5>', ":lua require'dap'.continue()<CR>", default_opts)
+keymap('n', '<F1>', ":lua require'dap'.step_over()<CR>", default_opts)
+keymap('n', '<F2>', ":lua require'dap'.step_into()<CR>", default_opts)
+keymap('n', '<F3>', ":lua require'dap'.step_out()<CR>", default_opts)
 
