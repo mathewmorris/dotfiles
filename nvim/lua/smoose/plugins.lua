@@ -14,8 +14,6 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'folke/tokyonight.nvim'
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'terrortylor/nvim-comment'
   use 'folke/neodev.nvim'
@@ -47,7 +45,7 @@ return require('packer').startup(function(use)
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
 
-      -- Autocompletion
+     -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'L3MON4D3/LuaSnip'},
@@ -56,17 +54,12 @@ return require('packer').startup(function(use)
 
   use 'jbyuki/one-small-step-for-vimkind'
   use 'theHamsta/nvim-dap-virtual-text'
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-
-  require('nvim-dap-virtual-text').setup()
-  require('dapui').setup()
-  require('nvim_comment').setup()
-  require('neodev').setup({
-    library = {
-      plugins = { "nvim-dap-ui" },
-      types = true,
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = {
+      {'mfussenegger/nvim-dap'},
     }
-  })
+  }
 
   if packer_bootstrap then
     require('packer').sync()
