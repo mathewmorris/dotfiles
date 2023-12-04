@@ -6,7 +6,6 @@ lsp.ensure_installed({
   'tsserver',
   'eslint',
   'lua_ls',
-  'tailwindcss',
 })
 
 lsp.on_attach(function(_, bufnr)

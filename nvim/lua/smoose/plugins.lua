@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
   use 'tpope/vim-surround'
+  use 'jakewvincent/mkdnflow.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.3',
