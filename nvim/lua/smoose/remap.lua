@@ -57,8 +57,3 @@ keymap("n", "<Right>", ":vertical resize -1<CR>", default_opts)
 keymap("n", "<Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<Down>", ":resize +1<CR>", default_opts)
 
-keymap('n', '<F5>', ":lua require'dap'.continue()<CR>", default_opts)
-keymap('n', '<F1>', ":lua require'dap'.step_over()<CR>", default_opts)
-keymap('n', '<F2>', ":lua require'dap'.step_into()<CR>", default_opts)
-keymap('n', '<F3>', ":lua require'dap'.step_out()<CR>", default_opts)
-
