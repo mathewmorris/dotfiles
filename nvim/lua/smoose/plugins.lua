@@ -46,19 +46,10 @@ return require('packer').startup(function(use)
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
 
-     -- Autocompletion
+      -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'L3MON4D3/LuaSnip'},
-    }
-  }
-
-  use 'jbyuki/one-small-step-for-vimkind'
-  use 'theHamsta/nvim-dap-virtual-text'
-  use {
-    'rcarriga/nvim-dap-ui',
-    requires = {
-      {'mfussenegger/nvim-dap'},
     }
   }
 

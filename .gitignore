@@ -1,1 +1,3 @@
 nvim/packer/**/*
+nvim/plugin/**/*
+.luarc.json
