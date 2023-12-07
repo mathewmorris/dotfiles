@@ -1,3 +1,5 @@
 nvim/packer/**/*
 nvim/plugin/**/*
 .luarc.json
+nextjs-nodejs/**/*
+
