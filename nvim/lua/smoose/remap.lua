@@ -2,8 +2,10 @@ local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
--- Open up netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- Open lsp error message that's too long
+keymap("n", "L", ":lua vim.diagnostic.open_float()<CR>", default_opts)
+
+-- Nice find and replace
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Center search results
