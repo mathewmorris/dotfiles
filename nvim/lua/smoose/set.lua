@@ -25,4 +25,5 @@ vim.opt.relativenumber = true
 -- miscellaneous
 vim.opt.smartindent = true
 vim.opt.wrap = false
+vim.opt.sidescroll = 1
 
