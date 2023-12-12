@@ -41,6 +41,7 @@ vim.opt.relativenumber = true
 -- wrap: Disable wrapping of lines longer than the window width.
 vim.opt.smartindent = true
 vim.opt.wrap = false
+vim.opt.sidescroll = 1
 
 
 -- Netrw Configuration
