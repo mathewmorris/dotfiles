@@ -10,7 +10,7 @@ All configuration I'm used to, stored in one place.
     ```
 - install tools
     ```bash
-        sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev ninja-build gettext cmake unzip
+        sudo apt install g++ git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libz-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev ninja-build gettext cmake unzip
     ```
 - setup git config
     ```bash
@@ -69,4 +69,29 @@ All configuration I'm used to, stored in one place.
         cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
         sudo make install
     ```
+- install postgres
+    ```bash
+        # Create the file repository configuration:
+        sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+        # Import the repository signing key:
+        wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+        # Update the package lists:
+        sudo apt-get update
+
+        # Install the latest version of PostgreSQL.
+        # If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
+        sudo apt-get -y install postgresql
+    ```
+- create user for postgres
+    ```bash
+        sudo -i -u postgres
+        psql
+    ```
+    ```sql
+        CREATE USER <username>
+    ```
+
+
 
