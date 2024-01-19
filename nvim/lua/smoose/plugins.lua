@@ -20,7 +20,6 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- statusline (that cool looking bar at the bottom)
 
   -- Tools
-  use 'terrortylor/nvim-comment' -- comment shortcuts
   use 'ThePrimeagen/harpoon' -- mark files, switch between them ez
   use 'mbbill/undotree' -- go through undo history TIME SAVER
   use 'tpope/vim-surround' -- change enclosing pairs (ie: (), "", '')

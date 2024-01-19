@@ -10,7 +10,7 @@ All configuration I'm used to, stored in one place.
     ```
 - install tools
     ```bash
-        sudo apt install g++ git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libz-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev ninja-build gettext cmake unzip
+        sudo apt install lsb-release gpg g++ git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libz-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev ninja-build gettext cmake unzip
     ```
 - setup git config
     ```bash
