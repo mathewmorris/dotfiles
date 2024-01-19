@@ -37,8 +37,6 @@ alias sapu='sudo apt update'
 
 alias urb='cd ~/.rbenv/plugins/ruby-build && git pull'
 
-# export XDG_CONFIG_HOME="$HOME/dotfiles" # I don't think I need this, but will check on other machines
-
 find_and_kill_on_port() {
   port=$(lsof -n -i4TCP:$1 | grep LISTEN | awk '{ print $2 }')
   kill -9 $port
@@ -51,6 +49,7 @@ delete_branches() {
   git branch | grep -v "main" | xargs git branch -D
 }
 
+export XDG_CONFIG_HOME="$HOME/dotfiles" # nvim config
 export PATH
 export ZSH="$HOME/.oh-my-zsh"
 

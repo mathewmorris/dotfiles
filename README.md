@@ -70,5 +70,3 @@ All configuration I'm used to, stored in one place.
         sudo make install
     ```
 
-- run `:PackerInstall` in nvim
-
