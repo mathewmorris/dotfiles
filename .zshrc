@@ -27,7 +27,6 @@ alias cz="vim ~/.zshrc"
 
 alias ni="npm install"
 alias nr="npm run"
-alias yolo="rm -rf node_modules/ && rm package-lock.json && npm install"
 
 alias distro='cat /etc/*-release'
 
