@@ -20,9 +20,15 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim' -- statusline (that cool looking bar at the bottom)
 
   -- Tools
-  use 'ThePrimeagen/harpoon' -- mark files, switch between them ez
-  use 'mbbill/undotree' -- go through undo history TIME SAVER
-  use 'tpope/vim-surround' -- change enclosing pairs (ie: (), "", '')
+  use {
+    'ThePrimeagen/harpoon', -- Getting you where you want with the fewest keystrokes.
+    branch = 'harpoon2',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use 'mbbill/undotree' -- The undo history visualizer for VIM
+  use 'tpope/vim-surround' -- Delete/change/add parentheses/quotes/XML-tags/much more with ease
+  use 'HiPhish/nvim-ts-rainbow2' -- Rainbow delimiters for Neovim
+  use 'lukas-reineke/indent-blankline.nvim'
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.3',

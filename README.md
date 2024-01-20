@@ -33,9 +33,13 @@ All configuration I'm used to, stored in one place.
     ```bash
         ln ~/dotfiles/.tmux.conf ~/.tmux.conf
     ```
+- install p10k
+    ```bash
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    ```
 - install p10k theme
     ```bash
-      git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
     ```
 - install nodenv
     ```bash
