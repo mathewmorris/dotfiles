@@ -29,8 +29,6 @@ alias ni="npm install"
 alias nr="npm run"
 alias yolo="rm -rf node_modules/ && rm package-lock.json && npm install"
 
-# alias browse="/mnt/c/Program\ Files/BraveSoftware/Brave-Browser/Application/brave.exe"
-
 alias distro='cat /etc/*-release'
 
 alias sapu='sudo apt update'
