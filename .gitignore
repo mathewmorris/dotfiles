@@ -3,3 +3,6 @@ nvim/plugin/**/*
 .luarc.json
 nextjs-nodejs/**/*
 
+obsidian
+pulse
+

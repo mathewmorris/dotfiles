@@ -49,8 +49,31 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'L3MON4D3/LuaSnip'
 
-  -- Notebook
-  use 'jakewvincent/mkdnflow.nvim'
+  -- Notebook via Obsidian
+  use({
+    'epwalsh/obsidian.nvim',
+    tag = '*',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'hrsh7th/nvim-cmp',
+      'nvim-telescope/telescope.nvim',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require('obsidian').setup({
+        workspaces = {
+          {
+            name = 'personal',
+            path = '~/vaults/personal',
+          },
+          {
+            name = 'work',
+            path = '~/vaults/work',
+          },
+        },
+      })
+    end,
+  })
 
   -- Syntax Highlighting
   use {

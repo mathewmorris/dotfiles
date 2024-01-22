@@ -9,3 +9,11 @@ vim.keymap.set('n', '<leader>ps', function ()
   })
 end, {})
 
+require('telescope').setup{
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  }
+}
+
