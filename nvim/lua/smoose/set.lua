@@ -8,6 +8,8 @@ vim.g.maplocalleader = ' '
 -- Automatically save the file when switching buffers or writing to a file.
 vim.opt.autowrite = true
 
+vim.opt.conceallevel = 2
+
 -- Highlight the line where the cursor is located for better visibility.
 vim.opt.cursorline = true
 
