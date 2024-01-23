@@ -67,6 +67,12 @@ All configuration I'm used to, stored in one place.
     ```bash
         sudo apt install tmux
     ```
+- install tpm (tmux plugin manager)
+    ```bash
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+
+    Then run `C-a-i` command to install plugins
 - install neovim
     ```bash
         git clone https://github.com/neovim/neovim
