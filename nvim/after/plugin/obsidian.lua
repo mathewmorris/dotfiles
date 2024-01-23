@@ -4,23 +4,11 @@ require('obsidian').setup({
   -- the vault root is the parent directory of the `.obsidian` folder.
   -- You can also provide configuration overrides for each workspace through the `overrides` field.
   workspaces = {
-    {
-      name = "personal",
-      path = "~/notebook/personal",
-    },
-    {
-      name = "work",
-      path = "~/notebook/work",
-      -- Optional, override certain settings.
-      overrides = {
-        notes_subdir = "notes",
-      },
-    },
   },
 
   -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
   -- 'workspaces'. For example:
-  -- dir = "~/notebook/work",
+  dir = "~/notebook",
 
   -- Optional, set to true to use the current directory as a vault; otherwise
   -- the first workspace is opened by default.
@@ -35,13 +23,13 @@ require('obsidian').setup({
 
   daily_notes = {
     -- Optional, if you keep daily notes in a separate directory.
-    folder = "notes/dailies",
+    folder = "dailies",
     -- Optional, if you want to change the date format for the ID of daily notes.
     date_format = "%Y-%m-%d",
     -- Optional, if you want to change the date format of the default alias of daily notes.
     alias_format = "%B %-d, %Y",
     -- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-    template = nil
+    template = null
   },
 
   -- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
@@ -55,7 +43,7 @@ require('obsidian').setup({
     -- Where to put new notes created from completion. Valid options are
     --  * "current_dir" - put new notes in same directory as the current buffer.
     --  * "notes_subdir" - put new notes in the default notes subdirectory.
-    new_notes_location = "current_dir",
+    new_notes_location = "notes_subdir",
 
     -- Control how wiki links are completed with these (mutually exclusive) options:
     --
@@ -184,7 +172,7 @@ require('obsidian').setup({
   -- 1. "current" (the default) - to always open in the current window
   -- 2. "vsplit" - to open in a vertical split if there's not already a vertical split
   -- 3. "hsplit" - to open in a horizontal split if there's not already a horizontal split
-  open_notes_in = "current",
+  open_notes_in = "hsplit",
 
   -- Optional, configure additional syntax highlighting / extmarks.
   -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
