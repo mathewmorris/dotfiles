@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'folke/tokyonight.nvim'
+  use "rafamadriz/neon"
   use 'nvim-lualine/lualine.nvim' -- statusline (that cool looking bar at the bottom)
 
   -- Tools
