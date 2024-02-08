@@ -47,7 +47,7 @@ keymap("n", "J", "mzJ`z", default_opts)
 keymap("n", "Q", "<nop>", default_opts)
 
 -- tmux brilliance
-keymap("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", default_opts)
+keymap("n", "<C-f>", "<cmd>silent !tmux new tmux-sessionizer<CR>", default_opts)
 
 vim.keymap.set("n", "<leader>f", function()
   vim.lsp.buf.format()

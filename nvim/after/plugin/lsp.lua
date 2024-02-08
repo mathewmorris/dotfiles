@@ -19,7 +19,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
     vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
-    vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts) 
+    vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
   end
 })
 
@@ -31,8 +31,14 @@ end
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {},
+  ensure_installed = {
+    'tsserver',
+    'lua_ls',
+  },
   handlers = {default_setup},
+  tsserver = function()
+    require('lspconfig').tsserver.setup({})
+  end,
   lua_ls = function()
     require('lspconfig').lua_ls.setup({
       settings = {

@@ -3,6 +3,7 @@ All configuration I'm used to, stored in one place.
 
 ## zsh
 // TODO: write a script that will do all this for me
+// TODO: use stow to reflect ~
 
 - update apt repos
     ```bash
