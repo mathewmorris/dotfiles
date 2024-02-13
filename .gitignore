@@ -1,7 +1,8 @@
-nvim/packer/**/*
-nvim/plugin/**/*
+nvim/packer
+nvim/plugin
 .luarc.json
-nextjs-nodejs/**/*
+nextjs-nodejs
+github-copilot
 
 obsidian
 pulse

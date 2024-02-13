@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
     tag = '0.1.3',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'github/copilot.vim'
 
   -- Git
   use 'tpope/vim-fugitive' -- Git in neovim
