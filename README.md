@@ -3,7 +3,6 @@ All configuration I'm used to, stored in one place.
 
 ## zsh
 // TODO: write a script that will do all this for me
-// TODO: use stow to reflect ~
 
 - update apt repos
     ```bash
@@ -26,13 +25,9 @@ All configuration I'm used to, stored in one place.
     ```bash
         sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
-- link .zshrc file to ~
+- move all files to home directory
     ```bash
-        ln ~/dotfiles/.zshrc ~/.zshrc
-    ```
-- link .tmux.conf to ~
-    ```bash
-        ln ~/dotfiles/.tmux.conf ~/.tmux.conf
+        stow -vvv .
     ```
 - install p10k
     ```bash

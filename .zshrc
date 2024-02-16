@@ -2,7 +2,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-[[ ! -f ~/dotfiles/.p10k.zsh ]] || source ~/dotfiles/.p10k.zsh # load personal prompt config
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # load personal prompt config
 source ~/powerlevel10k/powerlevel10k.zsh-theme # load powerlevel10k
 
 # zsh plugins https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
@@ -46,7 +46,7 @@ delete_branches() {
   git branch | grep -v "main" | xargs git branch -D
 }
 
-export XDG_CONFIG_HOME="$HOME/dotfiles" # nvim config
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH
 export ZSH="$HOME/.oh-my-zsh"
 
