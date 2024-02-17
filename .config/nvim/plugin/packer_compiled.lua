@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/smoose/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/home/smoose/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/smoose/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -139,12 +134,6 @@ _G.packer_plugins = {
     path = "/home/smoose/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow2",
     url = "https://github.com/HiPhish/nvim-ts-rainbow2"
   },
-  ["obsidian.nvim"] = {
-    config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\robsidian\frequire\0" },
-    loaded = true,
-    path = "/home/smoose/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
-    url = "https://github.com/epwalsh/obsidian.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/smoose/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -183,10 +172,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: obsidian.nvim
-time([[Config for obsidian.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
-time([[Config for obsidian.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     tag = '0.1.3',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'github/copilot.vim'
+--  use 'github/copilot.vim'
 
   -- Git
   use 'tpope/vim-fugitive' -- Git in neovim
@@ -51,20 +51,20 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
 
   -- Notebook via Obsidian
-  use({
-    'epwalsh/obsidian.nvim',
-    tag = '*',
-    requires = {
-      'nvim-lua/plenary.nvim',
-      'hrsh7th/nvim-cmp',
-      'nvim-telescope/telescope.nvim',
-      'nvim-treesitter/nvim-treesitter',
-    },
-    config = function()
-      require('obsidian').setup({
-      })
-    end,
-  })
+--  use({
+--    'epwalsh/obsidian.nvim',
+--    tag = '*',
+--    requires = {
+--      'nvim-lua/plenary.nvim',
+--      'hrsh7th/nvim-cmp',
+--      'nvim-telescope/telescope.nvim',
+--      'nvim-treesitter/nvim-treesitter',
+--    },
+--    config = function()
+--      require('obsidian').setup({
+--      })
+--    end,
+--  })
 
   -- Syntax Highlighting
   use {
