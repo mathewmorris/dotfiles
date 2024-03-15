@@ -18,11 +18,11 @@ vim.opt.autoread = true
 
 -- Use spaces instead of tabs and configure indentation:
 -- tabstop: Number of spaces that a <Tab> in the file counts for.
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 -- softtabstop: Number of spaces to insert when <Tab> is pressed and when backspacing over a <Tab>.
-vim.opt.softtabstop = 2
+vim.opt.softtabstop = 4
 -- shiftwidth: Number of spaces to use for each step of (auto)indent.
-vim.opt.shiftwidth = 2
+vim.opt.shiftwidth = 4
 -- shiftround: Round indent to a multiple of 'shiftwidth'.
 vim.opt.shiftround = true
 -- expandtab: Convert tabs to spaces.

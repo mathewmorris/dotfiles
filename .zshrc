@@ -50,3 +50,4 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH
 export ZSH="$HOME/.oh-my-zsh"
 
+fpath+=${ZDOTDIR:-~}/.zsh_functions
